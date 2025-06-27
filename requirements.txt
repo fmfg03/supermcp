@@ -63,7 +63,18 @@ tqdm>=4.65.0
 # numpy>=1.24.0
 # langwatch>=0.2.0
 
-# Optional: LangGraph/LangChain Dependencies
-# langchain>=0.1.0
-# langgraph>=0.1.0
-# langchain-openai>=0.1.0
+# LangGraph/LangChain Dependencies
+langchain>=0.3.0
+langgraph>=0.2.0
+langchain-openai>=0.2.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+
+# Graphiti Knowledge Graph Dependencies
+graphiti-core>=0.3.0
+neo4j>=5.0.0
+py2neo>=2024.0.0
+
+# Enhanced Memory and State Management
+typing-extensions>=4.8.0
+pydantic>=2.5.0

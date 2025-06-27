@@ -1,7 +1,9 @@
-export default {
-  transform: {},
+module.exports = {
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  },
   moduleFileExtensions: ["js", "mjs"],
   testEnvironment: "node",
-  testMatch: ["**/*.test.js"],
+  testMatch: ["**/*.test.js"]
 };
 

@@ -1,0 +1,73 @@
+{
+  "unified_system": {
+    "name": "SuperMCP Unified Command Center",
+    "version": "1.0.0",
+    "port": 9000,
+    "host": "0.0.0.0"
+  },
+  "services": {
+    "mcp_backend": {
+      "port": 3000,
+      "status": "external",
+      "health_endpoint": "/health"
+    },
+    "mcp_frontend": {
+      "port": 5174,
+      "status": "external",
+      "health_endpoint": "/"
+    },
+    "enterprise_dashboard": {
+      "port": 8126,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "task_validation": {
+      "port": 8127,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "webhook_monitoring": {
+      "port": 8125,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "a2a_server": {
+      "port": 8200,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "googleai_agent": {
+      "port": 8213,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "unified_bridge": {
+      "port": 9001,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "enterprise_bridge": {
+      "port": 8128,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "voice_system": {
+      "port": 8300,
+      "status": "managed",
+      "health_endpoint": "/health"
+    },
+    "langgraph_sam": {
+      "port": 8400,
+      "status": "managed",
+      "health_endpoint": "/health"
+    }
+  },
+  "features": {
+    "voice_enabled": true,
+    "a2a_enabled": true,
+    "enterprise_enabled": true,
+    "langgraph_enabled": true,
+    "graphiti_enabled": true,
+    "monitoring_enabled": true
+  }
+}
