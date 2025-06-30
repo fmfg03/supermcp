@@ -73,7 +73,8 @@ langchain-community>=0.3.0
 # Graphiti Knowledge Graph Dependencies
 graphiti-core>=0.3.0
 neo4j>=5.0.0
-py2neo>=2024.0.0
+py2neo==2021.2.4
+
 
 # Enhanced Memory and State Management
 typing-extensions>=4.8.0
