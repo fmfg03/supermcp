@@ -1,0 +1,15 @@
+{
+  "opportunity_cost_multiplier": 1.2,
+  "quality_weight": 0.4,
+  "speed_weight": 0.3,
+  "cost_weight": 0.3,
+  "time_value_discount_rate": 0.05,
+  "quality_cost_curve": "exponential",
+  "max_acceptable_cost": 1.0,
+  "cost_efficiency_thresholds": {
+    "excellent": 0.001,
+    "good": 0.005,
+    "fair": 0.02,
+    "poor": 0.1
+  }
+}

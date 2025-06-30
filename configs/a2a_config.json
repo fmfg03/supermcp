@@ -7,17 +7,17 @@
   "agents": {
     "manus": {
       "port": 8210,
-      "mcp_url": "http://localhost:3000",
+      "mcp_url": "http://sam.chat:3000",
       "capabilities": ["orchestration", "task_planning", "delegation"]
     },
     "sam": {
       "port": 8211, 
-      "mcp_url": "http://localhost:3001",
+      "mcp_url": "http://sam.chat:3001",
       "capabilities": ["execution", "analysis", "autonomous_processing"]
     },
     "memory": {
       "port": 8212,
-      "mcp_url": "http://localhost:3000/memory", 
+      "mcp_url": "http://sam.chat:3000/memory", 
       "capabilities": ["semantic_memory", "embedding_search", "context_retrieval"]
     }
   },

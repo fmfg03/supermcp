@@ -374,10 +374,10 @@ class EnvironmentManager:
         else:  # development
             env_vars = {
                 **base_vars,
-                'DATABASE_URL': 'postgresql://mcp_user:dev_password@localhost:5432/mcp_dev',
-                'REDIS_URL': 'redis://localhost:6379',
+                'DATABASE_URL': 'postgresql://mcp_user:dev_password@sam.chat:5432/mcp_dev',
+                'REDIS_URL': 'redis://sam.chat:6379',
                 'JWT_SECRET': 'dev_jwt_secret_not_for_production',
-                'DOMAIN': 'localhost'
+                'DOMAIN': 'sam.chat'
             }
         
         return {k: v for k, v in env_vars.items() if v is not None}

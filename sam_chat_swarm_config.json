@@ -1,0 +1,204 @@
+{
+  "supermcp_swarm_config": {
+    "name": "SuperMCP Swarm Intelligence",
+    "description": "Configuración especial para acceso unificado desde sam.chat",
+    "version": "1.0.0",
+    "architecture": "peer-to-peer",
+    
+    "access_endpoints": {
+      "swarm_core": {
+        "url": "ws://sam.chat:8400",
+        "type": "websocket",
+        "description": "Core swarm intelligence system"
+      },
+      "dashboard": {
+        "url": "http://sam.chat:8401",
+        "type": "web",
+        "description": "Real-time monitoring dashboard"
+      },
+      "api_gateway": {
+        "url": "http://sam.chat:8402",
+        "type": "rest",
+        "description": "RESTful API for external integration"
+      }
+    },
+    
+    "sam_chat_integration": {
+      "enabled": true,
+      "agent_id": "sam_chat_gateway",
+      "capabilities": [
+        "natural_language_interface",
+        "swarm_coordination",
+        "task_delegation",
+        "real_time_monitoring",
+        "consensus_facilitation"
+      ],
+      "auto_connect": true,
+      "priority_level": 9
+    },
+    
+    "unified_commands": {
+      "/swarm-status": {
+        "description": "Get current swarm status and metrics",
+        "endpoint": "GET /api/swarm/status"
+      },
+      "/swarm-agents": {
+        "description": "List all active agents and their capabilities",
+        "endpoint": "GET /api/swarm/agents"
+      },
+      "/swarm-task": {
+        "description": "Assign task to swarm: /swarm-task [description]",
+        "endpoint": "POST /api/swarm/tasks"
+      },
+      "/swarm-consensus": {
+        "description": "Start consensus on proposal: /swarm-consensus [proposal]",
+        "endpoint": "POST /api/swarm/consensus"
+      },
+      "/swarm-dashboard": {
+        "description": "Get dashboard URL for visual monitoring",
+        "endpoint": "GET /api/swarm/dashboard"
+      },
+      "/swarm-logs": {
+        "description": "Get recent swarm activity logs",
+        "endpoint": "GET /api/swarm/logs"
+      }
+    },
+    
+    "agent_manifest": {
+      "manus": {
+        "name": "Manus Strategic Coordinator",
+        "type": "coordinator",
+        "role": "leader",
+        "specialties": ["planning", "coordination", "leadership"],
+        "sam_chat_alias": "manus"
+      },
+      "sam": {
+        "name": "SAM Autonomous Executor", 
+        "type": "executor",
+        "role": "specialist",
+        "specialties": ["execution", "autonomy", "adaptation"],
+        "sam_chat_alias": "sam-agent"
+      },
+      "memory": {
+        "name": "Memory Context Manager",
+        "type": "memory",
+        "role": "specialist", 
+        "specialties": ["memory", "retrieval", "patterns"],
+        "sam_chat_alias": "memory"
+      },
+      "googleai": {
+        "name": "GoogleAI Specialist",
+        "type": "ai_specialist",
+        "role": "specialist",
+        "specialties": ["ai", "language", "reasoning"],
+        "sam_chat_alias": "googleai"
+      },
+      "notion": {
+        "name": "Notion Knowledge Manager",
+        "type": "knowledge",
+        "role": "follower",
+        "specialties": ["knowledge", "organization", "collaboration"],
+        "sam_chat_alias": "notion"
+      },
+      "email": {
+        "name": "Email Communication Agent",
+        "type": "communication",
+        "role": "follower",
+        "specialties": ["communication", "messaging", "scheduling"],
+        "sam_chat_alias": "email"
+      },
+      "web": {
+        "name": "Web Agent",
+        "type": "web_agent",
+        "role": "follower",
+        "specialties": ["web", "scraping", "research"],
+        "sam_chat_alias": "web"
+      },
+      "analytics": {
+        "name": "Analytics Agent",
+        "type": "analytics",
+        "role": "specialist",
+        "specialties": ["analytics", "metrics", "insights"],
+        "sam_chat_alias": "analytics"
+      },
+      "search": {
+        "name": "Search Agent",
+        "type": "search",
+        "role": "follower",
+        "specialties": ["search", "retrieval", "filtering"],
+        "sam_chat_alias": "search"
+      },
+      "multimodel": {
+        "name": "Multi-Model AI Router",
+        "type": "multimodel",
+        "role": "specialist",
+        "specialties": ["ai_routing", "optimization", "monitoring"],
+        "sam_chat_alias": "multimodel"
+      }
+    },
+    
+    "swarm_features": {
+      "peer_to_peer_communication": {
+        "enabled": true,
+        "description": "Direct agent-to-agent communication"
+      },
+      "emergent_intelligence": {
+        "enabled": true,
+        "description": "Detection of emergent behaviors and patterns"
+      },
+      "consensus_building": {
+        "enabled": true,
+        "description": "Democratic decision making process"
+      },
+      "auto_organization": {
+        "enabled": true,
+        "description": "Dynamic role assignment and optimization"
+      },
+      "collective_problem_solving": {
+        "enabled": true,
+        "description": "Collaborative approach to complex problems"
+      },
+      "real_time_analytics": {
+        "enabled": true,
+        "description": "Live monitoring and performance metrics"
+      }
+    },
+    
+    "integration_patterns": {
+      "natural_language_to_swarm": {
+        "description": "Convert natural language requests to swarm tasks",
+        "example": "User: 'Analyze the latest market trends' → Swarm: Coordinate web, analytics, and AI agents"
+      },
+      "swarm_to_natural_language": {
+        "description": "Convert swarm activities to readable updates",
+        "example": "Swarm: Agent coordination → User: 'The team is working on your request...'"
+      },
+      "consensus_facilitation": {
+        "description": "Guide users through swarm consensus processes",
+        "example": "Present proposals, collect feedback, facilitate voting"
+      },
+      "real_time_updates": {
+        "description": "Stream swarm activity to sam.chat interface",
+        "example": "Live updates on task progress, agent status, emergent behaviors"
+      }
+    },
+    
+    "startup_sequence": {
+      "1": "Start swarm core system (swarm_intelligence_system.py)",
+      "2": "Initialize web dashboard (swarm_web_dashboard.py)", 
+      "3": "Connect demo agents (swarm_demo_agents.py)",
+      "4": "Launch API gateway for sam.chat integration",
+      "5": "Establish sam.chat connection as priority agent",
+      "6": "Begin swarm intelligence demonstrations"
+    },
+    
+    "monitoring_metrics": {
+      "swarm_coherence": "Measure of how well agents coordinate",
+      "consensus_speed": "How quickly decisions are reached",
+      "task_completion_rate": "Percentage of tasks completed successfully",
+      "emergent_behaviors": "Count of detected emergent patterns",
+      "communication_efficiency": "Effectiveness of inter-agent communication",
+      "collective_iq": "Overall intelligence level of the swarm"
+    }
+  }
+}

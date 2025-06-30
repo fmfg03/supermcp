@@ -1,0 +1,14 @@
+{
+  "name": "@supermcp/service-orchestration",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python main.py",
+    "dev": "python main.py --dev",
+    "test": "python -m pytest"
+  },
+  "engines": {
+    "python": ">=3.8"
+  }
+}

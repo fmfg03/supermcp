@@ -1,0 +1,107 @@
+# SuperMCP Development Environment Configuration
+
+# Override default settings for development
+app:
+  debug: true
+  host: "0.0.0.0"
+  port: 8000
+  auto_reload: true
+
+# Development logging
+logging:
+  level: "DEBUG"
+  format: "detailed"
+  show_sql: true
+
+# Development database (SQLite for easy setup)
+database:
+  url: "sqlite:///./data/supermcp_dev.db"
+  echo: true
+  create_tables: true
+
+# Development Redis (optional)
+redis:
+  url: "redis://sam.chat:6379/0"
+  
+# Security (relaxed for development)
+security:
+  secret_key: "dev-secret-key-not-for-production"
+  token_expire_minutes: 60
+  cors:
+    origins: ["*"]  # Allow all origins in development
+    
+# Swarm settings for development
+swarm:
+  port: 8400
+  max_agents: 20  # Fewer agents for development
+  consensus_timeout: 120  # Shorter timeout
+  heartbeat_interval: 30
+  debug_mode: true
+
+# AI model settings for development
+ai:
+  providers:
+    openai:
+      enabled: true
+      timeout: 30
+    anthropic:
+      enabled: true
+      timeout: 30
+    google:
+      enabled: true
+      timeout: 30
+    local:
+      enabled: true
+      priority: 1  # Prefer local models for cost savings
+
+# MCP servers development settings
+mcp:
+  servers:
+    filesystem:
+      enabled: true
+      debug: true
+      allowed_paths: ["./data", "./logs", "./temp"]
+    browser:
+      enabled: true
+      headless: false  # Show browser in development
+      debug: true
+    knowledge:
+      enabled: true
+      max_items: 100  # Smaller limit for development
+    developer:
+      enabled: true
+      allowed_commands: ["pytest", "black", "isort", "mypy"]
+    version_control:
+      enabled: true
+      allowed_repos: ["./"]
+    search:
+      enabled: true
+      index_size_limit: 1000
+
+# Terminal agent development settings
+terminal:
+  security_level: "safe"  # More restrictive in development
+  allowed_commands: ["ls", "pwd", "cat", "grep", "find", "python", "pip"]
+  sandbox_mode: true
+  timeout: 60
+
+# Monitoring for development
+monitoring:
+  metrics:
+    enabled: true
+    detailed: true
+  health_checks:
+    enabled: true
+    interval: 10  # More frequent checks
+  logging:
+    console: true
+    file: true
+    level: "DEBUG"
+
+# Development features
+development:
+  hot_reload: true
+  show_docs: true
+  debug_toolbar: true
+  profiling: true
+  test_mode: false

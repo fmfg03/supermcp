@@ -1,0 +1,24 @@
+# Production Dependencies
+-r base.txt
+
+# Production Server
+gunicorn>=21.2.0
+gevent>=23.9.0
+
+# Monitoring & Metrics
+prometheus-client>=0.19.0
+opentelemetry-api>=1.22.0
+opentelemetry-sdk>=1.22.0
+opentelemetry-instrumentation-fastapi>=0.43b0
+
+# Production Database
+psycopg2-binary>=2.9.0
+
+# Caching
+redis>=5.0.0
+
+# Security
+certifi>=2023.11.17
+
+# Health Checks
+healthcheck>=1.3.3

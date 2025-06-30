@@ -30,7 +30,7 @@ from sam_manus_notification_protocol import (
     NotificationType, TaskStatus
 )
 from manus_webhook_receiver import ManusWebhookReceiver
-from complete_webhook_agent_end_task_system import (
+from services.webhook-system.complete_webhook_agent_end_task_system import (
     WebhookManager, AgentEndTaskManager,
     WebhookEventType, AgentEndTaskReason
 )
