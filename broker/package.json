@@ -1,0 +1,24 @@
+{
+  "name": "@supermcp/broker",
+  "version": "1.0.0",
+  "description": "Central message broker for SuperMCP distributed agent system",
+  "main": "broker.js",
+  "scripts": {
+    "start": "node broker.js",
+    "dev": "nodemon broker.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "redis": "^4.6.7",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2"
+  },
+  "keywords": ["mcp", "broker", "websocket", "distributed", "agents"],
+  "author": "SuperMCP Team",
+  "license": "MIT"
+}
